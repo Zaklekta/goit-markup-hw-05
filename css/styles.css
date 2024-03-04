@@ -477,7 +477,8 @@ button {
   color: #fff;
   background: #4d5ae5;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-submit-btn:hover,
 .footer-form-submit-btn:focus {
@@ -542,7 +543,7 @@ button {
 .close-btn:hover .close-icon {
   fill: white;
 }
-.backdrop.is-opened {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
 }
