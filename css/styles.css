@@ -443,14 +443,16 @@ button {
   color: #fff;
 }
 .footer-form-input {
-  margin-right: 24px;
-  padding: 8px 16px;
+  padding-left: 16px;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
-  background: #2e2f42;
+  background-color: transparent;
   color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-input::placeholder {
   font-size: 12px;
@@ -459,24 +461,24 @@ button {
   color: #fff;
 }
 .footer-form-submit-btn {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
 
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   border: none;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -485,9 +487,12 @@ button {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #404bbf;
 }
-
+.footer-form-submit-icon {
+  margin-left: 16px;
+}
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 /* /Footer styles */
 
@@ -517,10 +522,13 @@ button {
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
 }
 .close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   padding: 0;
   right: 24px;
@@ -533,14 +541,18 @@ button {
   line-height: 0;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn:hover,
 .close-btn:focus {
   background-color: #404bbf;
   border: none;
 }
-.close-btn:hover .close-icon {
+.close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn:hover .close-icon,
+.close-btn:focus .close-icon {
   fill: white;
 }
 .backdrop.is-open {
@@ -568,7 +580,7 @@ button {
   margin-bottom: 4px;
 
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -578,6 +590,8 @@ button {
   width: 100%;
   height: 40px;
   padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-input:focus {
@@ -614,6 +628,12 @@ button {
   resize: none;
   padding: 8px 16px;
 
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-comment:focus {
@@ -679,12 +699,17 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
   margin-right: 8px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-privacy-checkbox:checked
   + .contact-form-checkbox-label
   .castom-checkbox {
   background-color: #404bbf;
-  fill: #ffffff;
+  fill: #f4f4fd;
+  border: none;
 }
 .contact-form-privacy-checkbox:focus
   + .contact-form-checkbox-label
